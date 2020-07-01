@@ -15,6 +15,7 @@ https://phower.me/2020/03/Hexo-theme-academia-%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%
 - git clone https://github.com/PhosphorW/hexo-theme-academia.git themes/Academia
 - npm install hexo-renderer-pug hexo-renderer-stylus
 
+- 最后在 _config.yml 中设置 theme: Academia
 - npx hexo server
 - 查看：http://localhost:4000/
 - 生成最后Public页面：npx hexo g

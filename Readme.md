@@ -20,6 +20,8 @@ https://phower.me/2020/03/Hexo-theme-academia-%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%
 - 查看：http://localhost:4000/
 - 生成最后Public页面：npx hexo g
 
+*Note: 每次生成新的静态页面时，最好删除 public 文件夹*
+
 ## More details
 
 参考网址：https://www.jianshu.com/p/51cc016a1933

@@ -1,0 +1,25 @@
+mini-projects:
+
+  - title: Target Identification in Multi-View Videos and Virtual Avatar Generation
+    system-name: Subway
+    gif: assets/img/vr_subway.gif
+    event: CRRC INSTITUTE 2022 (Beijing, China.)
+    event-web: https://hackmit.org/
+    team: <u>Jia-Qi Zhang</u>, Yi-Jun Li.
+    post: 
+    code: 
+    demo: 
+    description: This project presents a framework for virtual reality applications, including content generation, character positioning, navigation, interaction methods, and demonstrations, offering insights for specific domains.
+    prize: Received a certification of practical application.
+
+  # - title: An Autonomous Ground Monitoring and Tree Planting Robot
+  #   system-name: iPlanter
+  #   gif: assets/img/demo_iplanter.gif
+  #   event: GT IEEE RoboTech 2022 (Atlanta, GA, U.S.)
+  #   event-web: https://robotech2022.devpost.com/
+  #   team: <u>Khang Nguyen</u>, Muhtasim Mahfuz, Vincent Kipchoge, Johnwon Hyeon.
+  #   post: https://devpost.com/software/tree-planting-robot
+  #   code: https://github.com/mkhangg/robotech22
+  #   demo: https://youtu.be/GZ0oAX-lLSM
+  #   description: Our tree planting robot demonstrates the an on-farm surveying robot that autonomously determines soil quality, plants seeds, and collects on-ground images.
+  #   prize: Won 2nd place in Body Track, 3rd place in Electrical Track, and Top 8 Prizes over 47 competing teams (approximately 160 participants).

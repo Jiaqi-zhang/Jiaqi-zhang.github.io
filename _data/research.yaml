@@ -12,13 +12,30 @@ categories:
 
 projects:
 
+  - title: 'Skinned Motion Retargeting with Preservation of Body Part Relationships'
+    system-name: 
+    gif: assets/img/mr/smr.png
+    conference: IEEE Transactions on Visualization and Computer Graphics, TVCG 2024, CCF A
+    conference-web: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
+    status: 
+    authors: <b><u>Jia-Qi Zhang</u></b>, Miao Wang, Fu-Cheng Zhang, Fang-Lue Zhang
+    pdf: 
+    code: 
+    demo: 
+    slides: 
+    talk: 
+    abstract-less: Motion retargeting is an active research area in computer graphics and animation, allowing for the transfer of motion from one character to another, thereby creating diverse animated character data. While this technology has numerous applications in animation, games, and movies, current methods often produce unnatural or semantically inconsistent motion when applied
+    abstract-more: to characters with different shapes or joint counts. This is primarily due to a lack of consideration for the geometric and spatial relationships between the body parts of the source and target characters. To tackle this challenge, we introduce a novel spatially-preserving Skinned Motion Retargeting Network (SMRNet) capable of handling motion retargeting for characters with varying shapes and skeletal structures while maintaining semantic consistency. By learning a hybrid representation of the character's skeleton and shape in a rest pose, SMRNet transfers the rotation and root joint position of the source character's motion to the target character through embedded rest pose feature alignment. Additionally, it incorporates a differentiable loss function to further preserve the spatial consistency of body parts between the source and target. Comprehensive quantitative and qualitative evaluations demonstrate the superiority of our approach over existing alternatives, particularly in preserving spatial relationships more effectively.
+    tag: motion_retargeting
+    category: animation
+
   - title: 'HoughLaneNet: Lane Detection with Deep Hough Transform and Dynamic Convolution'
     system-name: 
     gif: assets/img/lane/houghlanenet.png
     conference: Computers & Graphics, 2023, <strong>Best Paper</strong>, CCF C
     conference-web: https://www.sciencedirect.com/journal/computers-and-graphics
     status: 
-    authors: <u>Jia-Qi Zhang</u>, Hao-Bin Duan, Jun-Long Chen, Ariel Shamir, Miao Wang
+    authors: <b><u>Jia-Qi Zhang</u></b>, Hao-Bin Duan, Jun-Long Chen, Ariel Shamir, Miao Wang
     pdf: https://arxiv.org/pdf/2307.03494.pdf
     code: https://github.com/Jiaqi-zhang/HoughLaneNet
     demo: 
@@ -35,7 +52,7 @@ projects:
     conference: IEEE Transactions on Visualization and Computer Graphics, TVCG 2022, CCF A
     conference-web: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
     status: 
-    authors: Min Shi#, <u>Jia-Qi Zhang#</u>, Shu-Yu Chen, Lin Gao, Yu-Kun Lai, Fang-Lue Zhang
+    authors: Min Shi#, <b><u>Jia-Qi Zhang#</u></b>, Shu-Yu Chen, Lin Gao, Yu-Kun Lai, Fang-Lue Zhang
     pdf: https://arxiv.org/pdf/2003.10685.pdf
     code: 
     demo: https://youtu.be/-1e7hRmXCEY
@@ -46,30 +63,13 @@ projects:
     tag: color_video
     category: colorization
 
-  - title: 'A review of image and video colorization: From analogies to deep learning'
-    system-name: 
-    gif: assets/img/color_survey/survey.png
-    conference: Visual Informatics, VI 2022
-    conference-web: https://www.sciencedirect.com/journal/visual-informatics
-    status: 
-    authors: Shu-Yu Chen, <u>Jia-Qi Zhang</u>, You-You Zhao, Paul L. Rosin, Yu-Kun Lai, Lin Gao
-    pdf: https://www.sciencedirect.com/science/article/pii/S2468502X22000389
-    code: 
-    demo: 
-    slides: 
-    talk: 
-    abstract-less: Image colorization is a classic and important topic in computer graphics, where the aim is to add color to a monochromatic input image to produce a colorful result. In this survey, we present the history of colorization research in chronological order and summarize popular algorithms in this field. Early work on colorization mostly focused on developing techniques to improve 
-    abstract-more: the colorization quality. In the last few years, researchers have considered more possibilities such as combining colorization with NLP (natural language processing) and focused more on industrial applications. To better control the color, various types of color control are designed, such as providing reference images or color-scribbles. We have created a taxonomy of the colorization methods according to the input type, divided into grayscale, sketch-based and hybrid. The pros and cons are discussed for each algorithm, and they are compared according to their main characteristics. Finally, we discuss how deep learning, and in particular Generative Adversarial Networks (GANs), has changed this field.
-    tag: color_survey
-    category: colorization
-
   - title: 'Write-An-Animation: High-level Text-based Animation Editing with Character-Scene Interaction'
     system-name: 
-    gif: assets/img/text2anim/egteaser3.jpg
+    gif: assets/img/text2anim/egteaser.png
     conference: Pacific Conference on Computer Graphics and Applications, PG 2021, CCF B
     conference-web: https://pg2022.org/
     status: 
-    authors: <u>Jia-Qi Zhang</u>, Xiang Xu, Shen Z.M, Huang Z.H, Yang Zhao, Cao Y.P, Wan P.F, Miao Wang
+    authors: <b><u>Jia-Qi Zhang</u></b>, Xiang Xu, Shen Z.M, Huang Z.H, Yang Zhao, Cao Y.P, Wan P.F, Miao Wang
     pdf: https://diglib.eg.org/bitstream/handle/10.1111/cgf14415/v40i7pp217-228.pdf
     code: 
     demo: https://youtu.be/3kgzasBL-UQ
@@ -86,15 +86,32 @@ projects:
     conference: IEEE Transactions on Visualization and Computer Graphics, TVCG 2020, CCF A
     conference-web: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
     status: 
-    authors: Shu-Yu Chen#, <u>Jia-Qi Zhang#</u>, Lin Gao, Yue He, Shi-Hong Xia, Min Shi, Fang-Lue Zhang
+    authors: Shu-Yu Chen#, <b><u>Jia-Qi Zhang#</u></b>, Lin Gao, Yue He, Shi-Hong Xia, Min Shi, Fang-Lue Zhang
     pdf: https://ieeexplore.ieee.org/abstract/document/9143503
     code: 
     demo: https://youtu.be/OCkJhaoupcU
     slides: 
     talk: 
-    abstract-less: In the animation industry, the colorization of raw sketch images is a vitally important but very time-consuming task. This article focuses on providing a novel solution that semiautomatically colorizes a set of images using a single colorized reference image. Our method is able to provide coherent colors for regions that have similar semantics to those in the reference image. An 
-    abstract-more: active-learning-based framework is used to match local regions, followed by mixed-integer quadratic programming (MIQP) which considers the spatial contexts to further refine the matching results. We efficiently utilize user interactions to achieve high accuracy in the final colorized images. Experiments show that our method outperforms the current state-of-the-art deep learning based colorization method in terms of color coherency with the reference image. The region matching framework could potentially be applied to other applications, such as color transfer.
+    abstract-less: In the animation industry, the colorization of raw sketch images is a vitally important but very time-consuming task. This article focuses on providing a novel solution that semiautomatically colorizes a set of images using a single colorized reference image. Our method is able to provide coherent colors for regions that have similar semantics to those in the reference image. An active learning
+    abstract-more: based framework is used to match local regions, followed by mixed-integer quadratic programming (MIQP) which considers the spatial contexts to further refine the matching results. We efficiently utilize user interactions to achieve high accuracy in the final colorized images. Experiments show that our method outperforms the current state-of-the-art deep learning based colorization method in terms of color coherency with the reference image. The region matching framework could potentially be applied to other applications, such as color transfer.
     tag: color_sketch
+    category: colorization
+
+  - title: 'A review of image and video colorization: From analogies to deep learning'
+    system-name: 
+    gif: assets/img/color_survey/survey.png
+    conference: Visual Informatics, VI 2022
+    conference-web: https://www.sciencedirect.com/journal/visual-informatics
+    status: 
+    authors: Shu-Yu Chen, <b><u>Jia-Qi Zhang</u></b>, You-You Zhao, Paul L. Rosin, Yu-Kun Lai, Lin Gao
+    pdf: https://www.sciencedirect.com/science/article/pii/S2468502X22000389
+    code: 
+    demo: 
+    slides: 
+    talk: 
+    abstract-less: Image colorization is a classic and important topic in computer graphics, where the aim is to add color to a monochromatic input image to produce a colorful result. In this survey, we present the history of colorization research in chronological order and summarize popular algorithms in this field. Early work on colorization mostly focused on developing techniques to improve the 
+    abstract-more: colorization quality. In the last few years, researchers have considered more possibilities such as combining colorization with NLP (natural language processing) and focused more on industrial applications. To better control the color, various types of color control are designed, such as providing reference images or color-scribbles. We have created a taxonomy of the colorization methods according to the input type, divided into grayscale, sketch-based and hybrid. The pros and cons are discussed for each algorithm, and they are compared according to their main characteristics. Finally, we discuss how deep learning, and in particular Generative Adversarial Networks (GANs), has changed this field.
+    tag: color_survey
     category: colorization
 
 

@@ -1,5 +1,9 @@
 updates:
 
+  - picture: assets/img/updates_gan/happy_tree.jpg
+    desc: The <hightlight>SMRNet</hightlight> paper is accepted to TVCG 2024!
+    time: July 2024
+
   - picture: assets/img/updates_gan/city_boy.jpg
     desc: <hightlight>HoughLaneNet</hightlight> won Best Paper Award prizes at C&G 2023! 
     time: October 2023
@@ -23,3 +27,4 @@ updates:
   - picture: assets/img/updates_gan/happy_tree.jpg
     desc: The <hightlight>Active Colorization</hightlight> paper is accepted to TVCG 2020!
     time: August 2020
+  

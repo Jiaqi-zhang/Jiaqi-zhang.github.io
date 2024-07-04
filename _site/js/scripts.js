@@ -248,7 +248,7 @@ $('.collapse').on('show.bs.collapse', function () {
 
 
 // Modified from https://codepen.io/SohRonery/pen/wvvBLyP
-var itemsPerPageDefault = 5;
+var itemsPerPageDefault = 10;
 var currentNumberPages = 1;
 var currentPage = 1;
 var currentFilter = '*';

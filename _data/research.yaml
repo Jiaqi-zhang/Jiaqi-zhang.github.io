@@ -62,6 +62,23 @@ projects:
     abstract-more: constraint network. The color transform network takes the target line art images as well as the line art and color images of one or more reference images as input, and generates corresponding target color images. To cope with larger differences between the target line art image and reference color images, our architecture utilizes non-local similarity matching to determine the region correspondences between the target image and the reference images, which are used to transform the local color information from the references to the target. To ensure global color style consistency, we further incorporate Adaptive Instance Normalization (AdaIN) with the transformation parameters obtained from a style embedding vector that describes the global color style of the references, extracted by an embedder. The temporal constraint network takes the reference images and the target image together in chronological order, and learns the spatiotemporal features through 3D convolution to ensure the temporal consistency of the target image and the reference image. Our model can achieve even better coloring results by fine-tuning the parameters with only a small amount of samples when dealing with an animation of a new style. To evaluate our method, we build a line art coloring dataset. Experiments show that our method achieves the best performance on line art video coloring compared to the state-of-the-art methods and other baselines.
     tag: color_video
     category: colorization
+  
+  - title: 'A review of image and video colorization: From analogies to deep learning'
+    system-name: 
+    gif: assets/img/color_survey/survey.png
+    conference: Visual Informatics, VI 2022
+    conference-web: https://www.sciencedirect.com/journal/visual-informatics
+    status: 
+    authors: Shu-Yu Chen, <b><u>Jia-Qi Zhang</u></b>, You-You Zhao, Paul L. Rosin, Yu-Kun Lai, Lin Gao
+    pdf: https://www.sciencedirect.com/science/article/pii/S2468502X22000389
+    code: 
+    demo: 
+    slides: 
+    talk: 
+    abstract-less: Image colorization is a classic and important topic in computer graphics, where the aim is to add color to a monochromatic input image to produce a colorful result. In this survey, we present the history of colorization research in chronological order and summarize popular algorithms in this field. Early work on colorization mostly focused on developing techniques to improve the 
+    abstract-more: colorization quality. In the last few years, researchers have considered more possibilities such as combining colorization with NLP (natural language processing) and focused more on industrial applications. To better control the color, various types of color control are designed, such as providing reference images or color-scribbles. We have created a taxonomy of the colorization methods according to the input type, divided into grayscale, sketch-based and hybrid. The pros and cons are discussed for each algorithm, and they are compared according to their main characteristics. Finally, we discuss how deep learning, and in particular Generative Adversarial Networks (GANs), has changed this field.
+    tag: color_survey
+    category: colorization
 
   - title: 'Write-An-Animation: High-level Text-based Animation Editing with Character-Scene Interaction'
     system-name: 
@@ -96,24 +113,6 @@ projects:
     abstract-more: based framework is used to match local regions, followed by mixed-integer quadratic programming (MIQP) which considers the spatial contexts to further refine the matching results. We efficiently utilize user interactions to achieve high accuracy in the final colorized images. Experiments show that our method outperforms the current state-of-the-art deep learning based colorization method in terms of color coherency with the reference image. The region matching framework could potentially be applied to other applications, such as color transfer.
     tag: color_sketch
     category: colorization
-
-  - title: 'A review of image and video colorization: From analogies to deep learning'
-    system-name: 
-    gif: assets/img/color_survey/survey.png
-    conference: Visual Informatics, VI 2022
-    conference-web: https://www.sciencedirect.com/journal/visual-informatics
-    status: 
-    authors: Shu-Yu Chen, <b><u>Jia-Qi Zhang</u></b>, You-You Zhao, Paul L. Rosin, Yu-Kun Lai, Lin Gao
-    pdf: https://www.sciencedirect.com/science/article/pii/S2468502X22000389
-    code: 
-    demo: 
-    slides: 
-    talk: 
-    abstract-less: Image colorization is a classic and important topic in computer graphics, where the aim is to add color to a monochromatic input image to produce a colorful result. In this survey, we present the history of colorization research in chronological order and summarize popular algorithms in this field. Early work on colorization mostly focused on developing techniques to improve the 
-    abstract-more: colorization quality. In the last few years, researchers have considered more possibilities such as combining colorization with NLP (natural language processing) and focused more on industrial applications. To better control the color, various types of color control are designed, such as providing reference images or color-scribbles. We have created a taxonomy of the colorization methods according to the input type, divided into grayscale, sketch-based and hybrid. The pros and cons are discussed for each algorithm, and they are compared according to their main characteristics. Finally, we discuss how deep learning, and in particular Generative Adversarial Networks (GANs), has changed this field.
-    tag: color_survey
-    category: colorization
-
 
 
 

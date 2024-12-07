@@ -9,7 +9,7 @@ mini-projects:
     post: 
     code: 
     demo: 
-    description: This project presents a framework for virtual reality applications, including content generation, character positioning, navigation, interaction methods, and demonstrations, offering insights for specific domains.
+    description: Using data collected from three cameras, this project reconstructs the driver's movements within a subway cockpit in three dimensions. It includes the generation of a 3D environment, character positioning, navigation, interaction implementation and demonstration.
     prize: Received a certification of practical application.
 
   # - title: An Autonomous Ground Monitoring and Tree Planting Robot

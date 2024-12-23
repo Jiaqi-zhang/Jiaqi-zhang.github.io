@@ -11,10 +11,10 @@ $(window).scroll(function() {
 
 btn.on('click', function(e) {
     e.preventDefault();
-    const speechBalloon = document.querySelector('.speech-balloon');
+    // const speechBalloon = document.querySelector('.speech-balloon');
     const clickSound = new Audio('assets/sounds/collision_sound.wav');
     $('html, body').animate({scrollTop:0}, '300');
-    speechBalloon.innerText = 'back to top!';
+    // speechBalloon.innerText = 'back to top!';
     clickSound.play();
 });
 
@@ -76,15 +76,15 @@ function toggleTheme() {
 }
 
 
-// Handle scroll event to hide/show back-to-top and toggle theme button
-window.addEventListener('scroll', function() {
-    const buttonEl = document.querySelector('.toggle-theme-button');
-    if (window.scrollY > 0) {
-        buttonEl.style.display = 'none';
-    } else {
-        buttonEl.style.display = 'block';
-    }
-});
+// // Handle scroll event to hide/show back-to-top and toggle theme button
+// window.addEventListener('scroll', function() {
+//     const buttonEl = document.querySelector('.toggle-theme-button');
+//     if (window.scrollY > 0) {
+//         buttonEl.style.display = 'none';
+//     } else {
+//         buttonEl.style.display = 'block';
+//     }
+// });
 
 
 // Owl carousel for updates
@@ -115,21 +115,21 @@ let endEvent = isMobile ? 'touchend' : 'mouseup';
 
 
 // Capture mouse down (desktop) or touch start (mobile) events
-popupIconContainer.addEventListener(startEvent, (e) => {
-    e.preventDefault();
-    isDragging = true;
-    let clientX = isMobile ? e.touches[0].clientX : e.clientX;
-    let clientY = isMobile ? e.touches[0].clientY : e.clientY;
+// popupIconContainer.addEventListener(startEvent, (e) => {
+//     e.preventDefault();
+//     isDragging = true;
+//     let clientX = isMobile ? e.touches[0].clientX : e.clientX;
+//     let clientY = isMobile ? e.touches[0].clientY : e.clientY;
 
-    startX = clientX;
-    startY = clientY;
-    originalX = popupIconContainer.getBoundingClientRect().left;
-    originalY = popupIconContainer.getBoundingClientRect().top;
-    dismissalArea.style.display = 'flex';
+//     startX = clientX;
+//     startY = clientY;
+//     originalX = popupIconContainer.getBoundingClientRect().left;
+//     originalY = popupIconContainer.getBoundingClientRect().top;
+//     dismissalArea.style.display = 'flex';
     
-    // Hide the speech balloon as users start dragging and drag the icon
-    document.querySelector('.speech-balloon').classList.add('hidden');
-});
+//     // Hide the speech balloon as users start dragging and drag the icon
+//     document.querySelector('.speech-balloon').classList.add('hidden');
+// });
 
 
 // Capture mouse move (desktop) or touch move (mobile) events
@@ -172,15 +172,15 @@ document.addEventListener(endEvent, (e) => {
 });
 
 
-// Hide speech balloon when scrolling down
-window.addEventListener('scroll', function() {
-    let scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    if (scrollPosition > 300) {
-        document.querySelector('.speech-balloon').classList.add('hidden');
-    } else {
-        document.querySelector('.speech-balloon').classList.remove('hidden');
-    }
-});
+// // Hide speech balloon when scrolling down
+// window.addEventListener('scroll', function() {
+//     let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+//     if (scrollPosition > 300) {
+//         document.querySelector('.speech-balloon').classList.add('hidden');
+//     } else {
+//         document.querySelector('.speech-balloon').classList.remove('hidden');
+//     }
+// });
 
 
 // Update progress bar as user scrolls down
@@ -388,24 +388,24 @@ $(document).ready(function() {
 });
 
 
-// Dark/Light theme based on predefined time
-document.addEventListener('DOMContentLoaded', function() {
-    const buttonEl = document.querySelector('.toggle-theme-button');
-    const speechBalloon = document.querySelector('.speech-balloon');
-    var currentHour = new Date().getHours();
+// // Dark/Light theme based on predefined time
+// document.addEventListener('DOMContentLoaded', function() {
+//     const buttonEl = document.querySelector('.toggle-theme-button');
+//     const speechBalloon = document.querySelector('.speech-balloon');
+//     var currentHour = new Date().getHours();
 
-    // Dark theme is used between 7 PM of last day
-    // to 7 AM next day. Otherwise, use light theme
-    if (currentHour >= 19 || currentHour < 7) {
-        document.body.classList.add('dark-theme');
-        buttonEl.innerText = '☀️';
-        speechBalloon.innerText = 'it\'s night, lights off!';
-    } else {
-        document.body.classList.add('light-theme');
-        buttonEl.innerText = '🌙';
-        speechBalloon.innerText = 'it\'s day, lights on!';
-    }
-});
+//     // Dark theme is used between 7 PM of last day
+//     // to 7 AM next day. Otherwise, use light theme
+//     if (currentHour >= 19 || currentHour < 7) {
+//         document.body.classList.add('dark-theme');
+//         buttonEl.innerText = '☀️';
+//         speechBalloon.innerText = 'it\'s night, lights off!';
+//     } else {
+//         document.body.classList.add('light-theme');
+//         buttonEl.innerText = '🌙';
+//         speechBalloon.innerText = 'it\'s day, lights on!';
+//     }
+// });
 
 
 // Automatically update year in footer

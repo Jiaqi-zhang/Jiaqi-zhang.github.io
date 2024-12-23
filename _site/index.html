@@ -42,13 +42,13 @@
         <a id="back-to-top-button"></a>
 
         <!-- Toggle dark/light theme button -->
-        <button class="toggle-theme-button" onclick="toggleTheme()">☀️</button>
+        <!-- <button class="toggle-theme-button" onclick="toggleTheme()">☀️</button> -->
         
         <!-- Assitant icon saying about theme changes -->
-        <div class="popup-icon-container" id="popupIconContainer" draggable="true">
+        <!-- <div class="popup-icon-container" id="popupIconContainer" draggable="true">
             <div class="icon"><img src="assets/img/mandu_icon.png" width="65" height="65"></div>
             <div class="speech-balloon"></div>
-        </div>
+        </div> -->
         
         <!-- Dismissal area for assistant icon -->
         <div class="dismissal-area" id="dismissalArea">&#10006;</div>
@@ -76,10 +76,12 @@
         <div class="social-icons">	
              <a class="social-icon" href="https://scholar.google.com/citations?hl=zh-CN&amp;user=a-CCwW8AAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa fa-graduation-cap" style="font-size: 35px; color: #4285f4"></i></a> 
              <a class="social-icon" href="https://orcid.org/0000-0002-8482-3666" target="_blank" rel="noopener" title="ORCID"><i class="fab fa-orcid" style="font-size: 35px; color: #9ece7a"></i></a> 
-            
+             <a class="social-icon" href="https://www.researchgate.net/profile/Zhang-Jia-Qi-2" target="_blank" rel="noopener" title="ResearchGate"><i class="fab fa-researchgate" style="font-size: 35px; color: #00D0BB"></i></a> 
+        </div>
+        <div class="social-icons">
              <a class="social-icon" href="https://github.com/Jiaqi-zhang" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" style="font-size: 35px; color: #171515"></i></a> 
-            
-            
+            <!--  -->
+             <a class="social-icon" href="https://www.researchgate.net/profile/Zhang-Jia-Qi-2" target="_blank" rel="noopener" title="Resume"><i class="fas fa-file-alt" style="font-size: 35px; color: #bd5d38"></i></a> 
         </div>
         <p></p>
     </div>
@@ -87,9 +89,11 @@
     <div class="col-lg-10 col-md-8">
         <h2>Zhang Jia-Qi (张加其) </h2>
         <p></p>
-        I am currently a Ph.D. candidate at the State Key Laboratory of Virtual Reality Technology and Systems at Beihang University, under the supervision of <hightlight>Professor Shimin Hu (胡事民)</hightlight> and <a href="http://miaowang.me/" target="_blank" rel="noopener">Associate Professor Miao Wang (汪淼)</a>. <b>Email: zhangjiaqi79@buaa.edu.cn</b>
+        I am currently a Ph.D. candidate at the State Key Laboratory of Virtual Reality Technology and Systems at Beihang University, under the supervision of <hightlight>Professor Shimin Hu (胡事民)</hightlight> and <a href="http://miaowang.me/" target="_blank" rel="noopener">Associate Professor Miao Wang (汪淼)</a>. You can reach me via email at: <b>zhangjiaqi79@buaa.edu.cn</b>.
         <p></p>
-        I obtained both my Bachelor's and Master's degrees in Software Engineering from North China Electric Power University, where I was mentored by <hightlight>Professor Suqin Wang (王素琴)</hightlight> and <hightlight>Professor Min Shi (石敏)</hightlight>. During my Master's program, I also conducted academic research under the guidance of <a href="http://geometrylearning.com/lin/" target="_blank" rel="noopener">Professor Lin Gao (高林)</a> at the Institute of Computing Technology, Chinese Academy of Sciences.      
+        I obtained both my Bachelor's and Master's degrees in Software Engineering from North China Electric Power University, where I was mentored by <a href="https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm">Associate Professor Su-Qin Wang (王素琴)</a> and <a href="https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm">Associate Professor Min Shi (石敏)</a>. During my Master's program, I also conducted academic research under the guidance of <a href="http://geometrylearning.com/lin/" target="_blank" rel="noopener">Professor Lin Gao (高林)</a> at the Institute of Computing Technology, Chinese Academy of Sciences.      
+        <p></p>
+              
         <p></p>
         <code>&gt;&gt; My research interests include the generation of <b>3D character animations</b>, with a primary focus on the automatic generation of 3D character movements from text or speech, as well as the generation of interactions between characters and objects within virtual environments.</code>
         <!-- <p></p> -->
@@ -237,23 +241,23 @@
         </div>
         <div class="col-sm-8">
             
-            <b>Deep Line Art Video Colorization with a Few References</b>
+            <b>Reference-Based Deep Line Art Video Colorization</b>
             <br />
             <i><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945" target="_blank" rel="noopener">IEEE Transactions on Visualization and Computer Graphics, TVCG 2022, CCF A</a></i> 
             
             <br />
             Min Shi#, <b><u>Jia-Qi Zhang#</u></b>, Shu-Yu Chen, Lin Gao, Yu-Kun Lai, Fang-Lue Zhang
             <br />
-             <a href="https://arxiv.org/pdf/2003.10685.pdf" target="_blank" rel="noopener">[PDF]</a> 
+             <a href="https://ieeexplore.ieee.org/document/9693178" target="_blank" rel="noopener">[PDF]</a> 
             
              | <a href="https://youtu.be/-1e7hRmXCEY" target="_blank" rel="noopener">[DEMO]</a> 
             
             
             <br />
             <u><b><i>Abstract</i></b>:</u> 
-            Coloring line art images based on the colors of reference images is an important stage in animation production, which is time-consuming and tedious. In this paper, we propose a deep architecture to automatically color line art videos with the same color style as the given reference images. Our framework consists of a color transform network and a temporal
+            Coloring line art images based on the colors of reference images is a crucial stage in animation production, which is time-consuming and tedious. This paper proposes a deep architecture to automatically color line art videos with the same color style as the given reference images. Our framework consists of a color transform network and a temporal refinement
             <span class="collapse" id="color_video">
-                constraint network. The color transform network takes the target line art images as well as the line art and color images of one or more reference images as input, and generates corresponding target color images. To cope with larger differences between the target line art image and reference color images, our architecture utilizes non-local similarity matching to determine the region correspondences between the target image and the reference images, which are used to transform the local color information from the references to the target. To ensure global color style consistency, we further incorporate Adaptive Instance Normalization (AdaIN) with the transformation parameters obtained from a style embedding vector that describes the global color style of the references, extracted by an embedder. The temporal constraint network takes the reference images and the target image together in chronological order, and learns the spatiotemporal features through 3D convolution to ensure the temporal consistency of the target image and the reference image. Our model can achieve even better coloring results by fine-tuning the parameters with only a small amount of samples when dealing with an animation of a new style. To evaluate our method, we build a line art coloring dataset. Experiments show that our method achieves the best performance on line art video coloring compared to the state-of-the-art methods and other baselines.
+                network based on 3U-net. The color transform network takes the target line art images as well as the line art and color images of the reference images as input and generates corresponding target color images. To cope with the large differences between each target line art image and the reference color images, we propose a distance attention layer that utilizes non-local similarity matching to determine the region correspondences between the target image and the reference images and transforms the local color information from the references to the target. To ensure global color style consistency, we further incorporate Adaptive Instance Normalization (AdaIN) with the transformation parameters obtained from a multiple-layer AdaIN that describes the global color style of the references extracted by an embedder network. The temporal refinement network learns spatiotemporal features through 3D convolutions to ensure the temporal color consistency of the results. Our model can achieve even better coloring results by fine-tuning the parameters with only a small number of samples when dealing with an animation of a new style. To evaluate our method, we build a line art coloring dataset. Experiments show that our method achieves the best performance on line art video coloring compared to the current state-of-the-art methods.
             </span> 
             <span> <a href="#color_video" data-toggle="collapse" onclick="toggleText(this)" id="link-color_video">... See More</a></span>
         </div>                       

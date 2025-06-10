@@ -26,7 +26,7 @@ if (e.target.closest('.navbar')) return;
 if (navCollapse.classList.contains('show')) {  
     new bootstrap.Collapse(navCollapse).hide();  
 }  
-});  
+});
 
 
 // Change the text interchangably "See More" and "See Less"

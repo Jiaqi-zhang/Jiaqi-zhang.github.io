@@ -616,3 +616,16 @@ canvas {
     padding-top: 5rem;
     margin-top: -5rem;
 }
+
+/* ===== Beautify the Toggler button ===== */  
+/* 1. Remove the navbar-toggler button's own border and background */  
+.navbar-toggler {  
+  border: none;  
+  background-color: transparent;  
+}  
+
+/* 2. When the button is clicked or focused via keyboard, remove the default outline and apply a shadow */  
+.navbar-toggler:focus {  
+  outline: none;           /* Remove the browser’s default focus outline */  
+  box-shadow: 0 0 0 0.25rem rgba(211, 214, 216, 0.25); /* Bootstrap’s classic blue shadow */  
+}  

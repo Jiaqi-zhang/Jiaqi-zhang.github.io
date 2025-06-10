@@ -19,9 +19,23 @@ btn.on('click', function(e) {
 });
 
 
+// top-navbar-button
+const navCollapse = document.getElementById('navbarLinks');  
+document.addEventListener('click', (e) => {  
+if (e.target.closest('.navbar')) return;  
+if (navCollapse.classList.contains('show')) {  
+    new bootstrap.Collapse(navCollapse).hide();  
+}  
+});  
+
+
 // Change the text interchangably "See More" and "See Less"
 function toggleText(linkElement) {
-    var collapseId = linkElement.getAttribute('href').substring(1);
+    var selector =  linkElement.getAttribute('href');  
+    if (!selector) return;
+    var collapseId = selector.replace('#', '');
+
+    // var collapseId = linkElement.getAttribute('href').substring(1);
     var collapseElement = document.getElementById(collapseId);
 
     $(collapseElement).on('hidden.bs.collapse', function () {

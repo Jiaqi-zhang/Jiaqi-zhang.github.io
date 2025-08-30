@@ -1,26 +1,17 @@
 updates:
 
+  - picture: 
+    desc: Our work <hightlight>HyT2M</hightlight> about text to motion is accepted by <hightlight>FCS (CCF B)</hightlight>. 
+    time: 2025-08
+
+  - picture: 
+    desc: Our work <hightlight>SHGS</hightlight> about garment simulation is accepted by <hightlight>PG 2025 (CCF B)</hightlight>. 
+    time: 2025-08
+
   - picture: assets/img/updates_gan/tvcg_2024.png
-    desc: The <hightlight>SMRNet</hightlight> paper is accepted to TVCG 2024!
-    time: July 2024
+    desc: Our work <hightlight>SMRNet</hightlight> about motion retargeting is accepted by <hightlight>TVCG (CCF A)</hightlight>. 
+    time: 2024-07
 
   - picture: assets/img/updates_gan/cg_2023.png
-    desc: <hightlight>HoughLaneNet</hightlight> won Best Paper Award prizes at C&G 2023! 
-    time: October 2023
-
-  - picture: assets/img/updates_gan/vi_2022.png
-    desc: The <hightlight>Colorization survey</hightlight> paper is accepted to VI 2022! 
-    time: March 2022
-
-  - picture: assets/img/updates_gan/tvcg_2022.png
-    desc: The <hightlight>Line Art Video Colorization</hightlight> paper is accepted to TVCG 2022!
-    time: May 2022
-
-  - picture: assets/img/updates_gan/pg_2021.png
-    desc: The <hightlight>Write-An-Animation</hightlight> paper is accepted to PG 2021!
-    time: July 2021
-    
-  - picture: assets/img/updates_gan/tvcg_2020.png
-    desc: The <hightlight>Active Colorization</hightlight> paper is accepted to TVCG 2020!
-    time: August 2020
-  
+    desc: Our work <hightlight>HoughLaneNet</hightlight> is accepted by <hightlight>Computers & Graphics 2023 (CCF C)</hightlight> and received the <hightlight>Best Paper Award</hightlight>.
+    time: 2023-10

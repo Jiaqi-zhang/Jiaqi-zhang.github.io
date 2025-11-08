@@ -9,17 +9,6 @@ This repository contains source code of [mkhangg academic website](https://mkhan
   <img src="https://mkhangg.com/assets/img/devices_mockup_transparent.png" data-canonical-src="https://mkhangg.com/assets/img/devices_mockup_transparent.png" width="700"/><br/>
 </p>
 
-<!-- Update -->
-## Update
-List of updates (in terms of functionalities):
-
-* **[30 Nov 2023]** Carousel for updates/news items (using [OwlCarousel2](https://owlcarousel2.github.io/OwlCarousel2/)) is added.
-* **[23 Nov 2023]** Filter buttons with categories and Pagination (using [Isotope](https://isotope.metafizzy.co/)) for projects is added.
-* **[19 Nov 2023]** Moving JS particles when dark theme is enabled (like [fireflies](https://en.wikipedia.org/wiki/Firefly)) is added.
-* **[17 Nov 2023]** New webpage scrollbar style and progress bar are added.
-* **[06 Nov 2023]** Sound effects when users interact with functionalities are added.
-* **[04 Nov 2023]** Simple draggable pop-up icon (like [Messenger](https://en.wikipedia.org/wiki/Messenger_(software))) and sink to disappear the icon are added.
-* **[30 Oct 2023]** Dark/Light theme toggle button is added and Dark/Light theme is displayed based on the client's time.
 
 <!-- PREREQUISITES -->
 
@@ -28,13 +17,13 @@ List of updates (in terms of functionalities):
 * [Ruby with DevKit](https://rubyinstaller.org/downloads/) (version 3.2.2-1)
 * [Jekyll](https://jekyllrb.com/) (version 4.3.2).
 
-After installing Ruby, Jekyll can be installed via the following command:
+Another very convenient way to set up a development environment is to use a Docker container to run Jekyll.
 
 ```
-gem install bundler jekyll 
+docker pull jekyll/jekyll:stable
 ```
 
-Now, you can use Jekyll locally as a website (static) generator on your laptop.
+
 
 <!-- USAGE -->
 
@@ -131,21 +120,12 @@ bundle exec jekyll server
 cd project_dir
 bundle install
 bundle exec jekyll serve --livereload
+
+# for docker
+docker run --rm --publish 4000:4000 -v C:\\project_dir\\:/srv/jekyll jekyll/jekyll:stable jekyll serve
 ```
 
+<!-- docker run --rm --publish 4000:4000 -v C:\\Users\\jiaqi\\home\\github\\Jiaqi-zhang.github.io\\:/srv/jekyll jekyll/jekyll-bundler:2.4.21 jekyll serve
+ -->
+
 You can either see the web version in the `_site/index.html` file or go to your `localhost`: [http://localhost:4000](http://localhost:4000).
-
-**4. Deploy the webpage at your desired host**
-
-Some hosting services you can use are:
-
-1. Amazon Web Service (AWS) - [tutorial](https://youtu.be/-l83oqcaTHg).
-2. GitHub - [tutorial](https://youtu.be/M5mg0r4ajt4).
-
-Hope you enjoy this tutorial and succesfully deploy for webpage!
-
-<!-- NOTE -->
-
-## Note:
-
-> I might not synchronize this source code frequently with my webpage in terms of content, but I will try my best to update any functionalities that I added to the actual one. Besides that, you can scrape this and modify it based on your wishes.

@@ -94,7 +94,17 @@ git remote add origin git@github.com:Jiaqi-zhang/Jiaqi-zhang.github.io.git
 
 git add .
 git commit -m "Update Vite config and package.json for deployment"
-git push origin main
+git push
 
 npm run deploy
 ```
+
+## Optional
+
+You can configure a custom domain and use Cloudflare to accelerate access. [Cloudflare](https://www.cloudflare.com/) is a global web infrastructure and security company that makes the Internet faster, safer, and more reliable for businesses and users worldwide.
+
+**Note:** Each deployment may overwrite the previously configured custom domain, so you need to re-add the domain address in the GitHub Pages settings.
+```
+Settings->Pages->Custom domain->Save
+```
+

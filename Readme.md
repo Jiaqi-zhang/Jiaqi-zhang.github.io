@@ -1,42 +1,50 @@
 # Academic Website
 
-This repository contains source code of [mkhangg academic website](https://mkhangg.com/) using Jekyll as a static website generator. Feel free to clone this code for your personal use!
+This repository contains source code of [academic website](https://jiaqi-zhang.space/) using Jekyll as a static website generator. Feel free to clone this code for your personal use!
 
-**For more detailed information and the latest updates, please refer to the [original GitHub project](https://github.com/mkhangg/academic-website).**
-
-
-<p align="center">
-  <img src="https://mkhangg.com/assets/img/devices_mockup_transparent.png" data-canonical-src="https://mkhangg.com/assets/img/devices_mockup_transparent.png" width="700"/><br/>
-</p>
+**For more detailed information and the latest updates, please refer to the [original GitHub project](https://github.com/Jiaqi-zhang/Jiaqi-zhang.github.io).**
 
 
 <!-- PREREQUISITES -->
 
 ## Prerequisites
 
-* [Ruby with DevKit](https://rubyinstaller.org/downloads/) (version 3.2.2-1)
-* [Jekyll](https://jekyllrb.com/) (version 4.3.2).
-
-Another very convenient way to set up a development environment is to use a Docker container to run Jekyll.
-
-```
-docker pull jekyll/jekyll:stable
-```
-
+* [Node.js](https://nodejs.org/en/download) (version 24.11.1)
+* [Vite](https://cn.vite.dev/guide/) (version 7.2.4)
 
 
 <!-- USAGE -->
 
 ## Usage
 
-This usage contains 4 relatively simple steps to make your own website.
 
-**1. Clone the repository**
+**1. Install dependencies and start the development server**
+
 
 ```
-git clone https://github.com/mkhangg/academic-website.git
-cd academic-website
+# Pull the Node.js Docker image:
+docker pull node:24-alpine
+
+# Create a Node.js container and start a Shell session:
+docker run -it --rm --publish 5173:5173 -v your_project_dir:/home/node --entrypoint sh node:24-alpine
+
+# Into the project directory
+cd /home/node
+
+# Install project dependencies
+npm install
+
+# Install Vite
+npm install -D vite
+
+# Start the development server
+npm run dev
+
 ```
+
+The index.html will be served on http://localhost:5173.
+
+
 
 **2. Customize personal information**
 
@@ -44,88 +52,18 @@ When opening the code from an IDE, you should see a structure like this:
 
 ```
 .
-├───assets                      # folder including your images, files, etc
-├───js                  
-    └───scripts.js              # the JS file for functional buttons
-├───styles              
-    └───styles.css              # the CSS file for colors and stuffs 
-├───_data               
-    ├───about.yaml              # data file for About section
-    ├───footer.yaml             # data file for Footer section
-    ├───gallery.yaml            # data file for Gallery section
-    ├───outreach.yaml           # data file for Outreach section
-    └───research.yaml           # data file for Research section
-├───_layouts      
-    └───main.html               # the HTML layout for the webpage 
-├───_libs      
-    ├───footer_widget.html      # html file for Footer widget
-    ├───gallery_widget.html     # html file for Gallery widget
-    ├───outreach_widget.html    # html file for Outreach widget
-    └───research_widget.html    # html file for Research widget     
-├───_sections           
-    ├───about.html              # html file for About section
-    ├───footer.html             # html file for Footer section
-    ├───gallery.html            # html file for Gallery section
-    ├───outreach.html           # html file for Outreach section
-    └───research.html           # html file for Research section
-├───_site                       # all contents for deployable version here!
-    ├───assets
-    ├───js
-    ├───styles
-    └───index.html              # the generated HTML file
-├───index.md                    # markdown file that uses main.html as layout
-└───_config.yml                 # information for webpage title and favicon
+├── dist/            ⭐ Production build (recommended for direct use)
+│   ├── index.html   → Open this file in browser to preview the website
+│   ├── assets/      → Packaged CSS, JS and other resource files
+│   └── ...
+├── src/             📝 Source code directory (for development and modification)
+│   ├── components/  → React components
+│   ├── App.tsx      → Main application component
+│   ├── Main.tsx     → Entry file
+│   └── ...
+├── package.json     📦 Project dependency configuration
+├── README.md        📖 Project documentation
+└── ...
 ```
 
-For example, you can modify the `_config.yml` file to your information:
 
-```
-# headers and icon 
-title: your name
-info: school/company abc
-icon-pic: assets/img/favicon.png
-```
-
-The same modification procedure can be applied to the `_data` folder. As you can see, each Section will associate with its own Widget, *which is iteratively used* in each section, and its own data, *which serves as a list of information*. 
-
-For example, `_sections/research.html` uses functions from `_libs/research_widget.html` and reads information from `_data/research.yaml`. So if you would like to modify your list of publications, go ahead and change these information in the `_data/research.yaml` file:
-
-```
-  - title: your paper title
-    system-name: your system title
-    gif: link to the representative image to your paper
-    conference: conference/journal name
-    conference-web: conference/journal webpage
-    status: status of the paper
-    authors: author list
-    pdf: link to your paper
-    code: code for your project
-    demo: demo for your project
-    slides: presentation slides 
-    talk: video of your presentation
-    abstract-less: portion of the paper's abstract
-    abstract-more: the rest of the paper's abstract
-    tag: a unique tag for your paper
-```
-
-However, if you can just leave anything field `blank`, it will just will not contain that information in the resultant HTML. **So don't worry about it!. You don't have to grid in all information, just leave some empty if you don't have it!**
-
-**3. Run the webpage at localhost**
-
-After changing to your information, the website can be tested using the following command:
-
-```
-bundle exec jekyll server
-# or
-cd project_dir
-bundle install
-bundle exec jekyll serve --livereload
-
-# for docker
-docker run --rm --publish 4000:4000 -v C:\\project_dir\\:/srv/jekyll jekyll/jekyll:stable jekyll serve
-```
-
-<!-- docker run --rm --publish 4000:4000 -v C:\\Users\\jiaqi\\home\\github\\Jiaqi-zhang.github.io\\:/srv/jekyll jekyll/jekyll-bundler:2.4.21 jekyll serve
- -->
-
-You can either see the web version in the `_site/index.html` file or go to your `localhost`: [http://localhost:4000](http://localhost:4000).

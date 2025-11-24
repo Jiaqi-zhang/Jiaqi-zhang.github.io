@@ -52,7 +52,7 @@ export const profileZh: Profile = {
   bio: "北京航空航天大学博士研究生在读，导师为胡事民教授与<a href='http://miaowang.me/'>汪淼教授</a>。本科及硕士均毕业于华北电力大学软件工程专业，师从<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>王素琴教授</a>和<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>石敏教授</a>。硕士期间，曾在中国科学院计算技术研究所<a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>高林教授</a>指导下进行访问研究。",
   interests: [
     { 
-      label: '三位角色动画', 
+      label: '三维角色动画', 
       description: '基于文本驱动的角色动作生成及角色与物体/场景交互生成。' 
     },
     { 

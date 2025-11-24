@@ -67,3 +67,34 @@ When opening the code from an IDE, you should see a structure like this:
 ```
 
 
+**3. Deployment**
+
+**3.1 Configure GitHub Pages**
+
+```
+Settings->Pages->Build and deployment
+    ->Source: Deploy from a branch
+    ->Branch: gh-pages / (root)
+    ->Save
+```
+
+**3.2 Deploy to GitHub Pages**
+
+```
+apk add git
+git config --global user.email "zhangjiaqi79@126.com"
+git config --global user.name "Jiaqi-Zhang"
+
+apk add openssh
+ssh-keygen -t rsa -b 4096 -C "zhangjiaqi79@126.com"
+
+git remote -v
+git remote remove origin
+git remote add origin git@github.com:Jiaqi-zhang/Jiaqi-zhang.github.io.git
+
+git add .
+git commit -m "Update Vite config and package.json for deployment"
+git push origin main
+
+npm run deploy
+```

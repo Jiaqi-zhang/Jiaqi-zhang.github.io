@@ -9,14 +9,14 @@ import React, { useMemo, useState } from 'react'
 import AnchorNav from '../components/layout/AnchorNav'
 import Section from '../components/common/Section'
 import Hero from '../components/hero/Hero'
-import NewsList from '../components/news/NewsList'
+import PreprintsList from '../components/preprints/PreprintsList'
 import ResearchList, { ResearchWork } from '../components/research/ResearchList'
 import ResearchFilter from '../components/research/ResearchFilter'
 import ProjectsGrid from '../components/projects/ProjectsGrid'
 import GalleryMosaic from '../components/gallery/GalleryMosaic'
 import AffiliationsRow from '../components/affiliations/AffiliationsRow'
 import { useI18n } from '../i18n/I18nProvider'
-import { profile, profileZh, news, works, projects, gallery, affiliations } from '../config/content'
+import { profile, profileZh, preprints, works, projects, gallery, affiliations } from '../config/content'
 
 /** Build unique tags from works (including All). */
 function buildTags(works: ResearchWork[]): string[] {
@@ -46,10 +46,12 @@ export default function HomePage() {
       <div id="about" className="scroll-mt-20" />
       <Hero profile={activeProfile} />
 
-      {/* News */}
-      <Section id="news" title={t('sections.news.title')} subtitle={t('sections.news.subtitle')}>
-        <NewsList items={news} />
-      </Section>
+      {/* Preprints (replaces original News section) */}
+      {preprints.length > 0 && (
+        <Section id="preprints" title={t('sections.preprints.title')} subtitle={t('sections.preprints.subtitle')}>
+          <PreprintsList items={preprints} />
+        </Section>
+      )}
 
       {/* Research */}
       <Section

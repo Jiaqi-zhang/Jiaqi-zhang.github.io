@@ -25,9 +25,9 @@ const dict = {
     brand: 'Zhang Jia-Qi @ BUAA',
     nav: {
       about: 'About',
-      news: 'News',
+      preprints: 'Report',
       research: 'Research',
-      projects: 'Projects',
+      projects: 'Project',
       gallery: 'Gallery',
     },
     actions: {
@@ -43,9 +43,9 @@ const dict = {
       project: 'Project',
     },
     sections: {
-      news: {
-        title: '🔥 News',
-        subtitle: 'Latest updates and announcements.',
+      preprints: {
+        title: '🔥 Technical Reports',
+        subtitle: 'Latest research preprints.',
       },
       research: {
         title: '📝 Research',
@@ -78,7 +78,7 @@ const dict = {
     brand: '张加其 @ BUAA',
     nav: {
       about: '关于',
-      news: '新闻',
+      preprints: '报告',
       research: '研究',
       projects: '项目',
       gallery: '图库',
@@ -96,9 +96,9 @@ const dict = {
       project: '项目页',
     },
     sections: {
-      news: {
-        title: '🔥 新闻',
-        subtitle: '最新动态与公告。',
+      preprints: {
+        title: '🔥 技术报告',
+        subtitle: '最新研究成果展示。',
       },
       research: {
         title: '📝 研究',

@@ -7,8 +7,8 @@
  */
 
 import type { Profile } from '../components/hero/Hero'
-import type { NewsItem } from '../components/news/NewsList'
 import type { ResearchWork } from '../components/research/ResearchList'
+import type { PreprintWork } from '../components/preprints/PreprintsList'
 import type { ProjectItem } from '../components/projects/ProjectsGrid'
 import type { GalleryItem } from '../components/gallery/GalleryMosaic'
 import type { AffiliationItem } from '../components/affiliations/AffiliationsRow'
@@ -72,16 +72,63 @@ export const profileZh: Profile = {
   avatarKeyword: 'portrait headshot',
 }
 
-/** Latest news items shown in the timeline. */
-export const news: NewsItem[] = [
-  { date: '2025-08-15', title: '2025-08 Our work HyT2M about text to motion is accepted by FCS (CCF B).', link: 'https://journal.hep.com.cn/fcs/EN/10.1007/s11704-025-50904-0' },
-  { date: '2025-08-02', title: '2025-08 Our work SHGS about garment simulation is accepted by PG 2025 (CCF B).', link: 'https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.70236' },
-  { date: '2024-07-10', title: '2024-07 Our work SMRNet about motion retargeting is accepted by TVCG (CCF A).' },
-  { date: '2023-10-10', title: '2023-10 Our work HoughLaneNet is accepted by Computers & Graphics 2023 (CCF C) and received the Best Paper Award.' },
+
+/** 
+ * Preprint works to be shown in a dedicated section.
+ * Reuses the ResearchWork shape, but no filtering or tag UI is displayed.
+ */
+export const preprints: PreprintWork[] = [
+//   {
+//     id: 'vl1',
+//     imgPath: '/images/works/shgs.jpg',
+//     title: 'Composable Vision-Language Reasoning with Modular Agents',
+//     authors: 'A. Chen, L. Rivera, S. Tan',
+//     venue: 'arXiv',
+//     year: 2026,
+//     abstract:
+//       'We introduce a modular agent framework for vision-language reasoning that composes specialized experts for perception, grounding, and logical inference, achieving strong generalization on complex multi-hop benchmarks.',
+//     tags: ['Preprint'],
+//     imageKeyword: 'vision language modular agents diagram',
+//     links: { paper: 'https://arxiv.org/abs/0000.00000' },    
+//     bibtex: `@ARTICLE{zhang2025smr,
+//   author={Zhang, Jia-Qi and Wang, Miao and Zhang, Fu-Cheng and Zhang, Fang-Lue},
+//   journal={IEEE Transactions on Visualization and Computer Graphics}, 
+//   title={Skinned Motion Retargeting With Preservation of Body Part Relationships}, 
+//   year={2025},
+//   volume={31},
+//   number={9},
+//   pages={4923-4936},
+//   keywords={Skeleton;Shape;Joints;Animation;Semantics;Bones;Task analysis;Motion retargeting;spatial relationship;different structure},
+//   doi={10.1109/TVCG.2024.3423426}
+// }`
+//   },
 ]
 
 /** Selected research works; tags will be aggregated to form filters. */
 export const works: ResearchWork[] = [
+    {
+    id: 'InterDist',
+    imgPath: '/images/works/interdist.jpg',
+    title: 'Generating Distance-Aware Human-to-Human Interaction Motions From Text Guidance',
+    authors: "<b><u>Jia-Qi Zhang</u></b>, Jia-Jun Wang, Fang-Lue Zhang, Miao Wang",
+    venue: 'IEEE Transactions on Visualization and Computer Graphics (TVCG, CCF A)',
+    year: 2026,
+    abstract: 'The growing demand for diverse and realistic character animations in video games and films has driven the development of natural language-controlled motion generation systems. While recent advances in text-driven 3D human motion synthesis have made significant progress, generating realistic multi-person interactions remains a major challenge. Existing methods, such as denoising diffusion models and autoregressive frameworks, have explored interaction dynamics using attention mechanisms and causal modeling. However, they consistently overlook a critical physical constraint: the explicit spatial distance between interacting body parts, which is essential for producing semantically accurate and physically plausible interactions. To address this limitation, we propose InterDist, a novel masked generative Transformer model operating in a discrete state space. Our key idea is to decompose two-person motion into three components: two independent, interaction-agnostic single-person motion sequences and a separate interaction distance sequence. This formulation enables direct learning of both individual motion and dynamic spatial relationships from text prompts. We implement this via a VQ-VAE that jointly encodes independent motions and relative distances into discrete codebooks, followed by a bidirectional masked generative Transformer that models their joint distribution conditioned on text. To better align motion and language, we also introduce a cross-modal interaction module to enhance text-motion association. Our approach ensures the generated motions exhibit both semantic alignment with textual descriptions and preserving plausible inter-character distances, setting a new benchmark for text-driven multi-person interaction generation.',
+    tags: ['Animation'],
+    imageKeyword: 'ai research abstract visualization',
+    links: { paper: 'https://ieeexplore.ieee.org/document/11342399', code: 'https://github.com/Jiaqi-zhang/InterDist' },
+    bibtex: `@article{11342399,
+author={Zhang, Jia-Qi and Wang, Jia-Jun and Zhang, Fang-Lue and Wang, Miao},
+journal={IEEE Transactions on Visualization and Computer Graphics}, 
+title={Generating Distance-Aware Human-to-Human Interaction Motions From Text Guidance}, 
+year={2026},
+volume={},
+number={},
+pages={1-13},
+keywords={Solid modeling;Computational modeling;Transformers;Dynamics;Semantics;Three-dimensional displays;Hands;Accuracy;Quantization (signal);Films;Human-to-human interaction;masked generative model;motion synthesis;text-driven generation},
+doi={10.1109/TVCG.2026.3651382},
+}`
+  },
   {
     id: 'hyt2m',
     imgPath: '/images/works/hyt2m.png',
@@ -104,7 +151,7 @@ doi = {https://doi.org/10.1007/s11704-025-50904-0},
 url = {https://journal.hep.com.cn/fcs/EN/10.1007/s11704-025-50904-0},
 author = {},
 keywords = {},
-abstract = {null}
+abstract = {null},
 }`
   },
   {
@@ -142,7 +189,7 @@ Unique-ID = {WOS:001590874700001},
     venue: 'IEEE Transactions on Visualization and Computer Graphics (TVCG, CCF A)',
     year: 2025,
     abstract: "Motion retargeting is an active research area in computer graphics and animation, allowing for the transfer of motion from one character to another, thereby creating diverse animated character data. While this technology has numerous applications in animation, games, and movies, current methods often produce unnatural or semantically inconsistent motion when applied to characters with different shapes or joint counts. This is primarily due to a lack of consideration for the geometric and spatial relationships between the body parts of the source and target characters. To tackle this challenge, we introduce a novel spatially-preserving Skinned Motion Retargeting Network (SMRNet) capable of handling motion retargeting for characters with varying shapes and skeletal structures while maintaining semantic consistency. By learning a hybrid representation of the character's skeleton and shape in a rest pose, SMRNet transfers the rotation and root joint position of the source character's motion to the target character through embedded rest pose feature alignment. Additionally, it incorporates a differentiable loss function to further preserve the spatial consistency of body parts between the source and target. Comprehensive quantitative and qualitative evaluations demonstrate the superiority of our approach over existing alternatives, particularly in preserving spatial relationships more effectively.",
-    tags: ['Retargeting'],
+    tags: ['Animation'],
     imageKeyword: 'diffusion model art abstract',
     links: { paper: 'https://ieeexplore.ieee.org/document/10586814'},
     bibtex: `@ARTICLE{zhang2025smr,

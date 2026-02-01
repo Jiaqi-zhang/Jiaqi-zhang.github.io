@@ -1,11 +1,11 @@
-/**  
- * ResearchList.tsx
+/**
+ * PreprintsList.tsx
  *
- * Displays research works as left-image, right-text cards with tags and links.
- * - Supports client-side pagination with Previous/Next controls.
- * - Shows pagination only when items exceed 2; page size = 2.
- * - Keeps image fully visible via object-contain and widens image column on larger screens.
- * - Uses motion for smooth filtering and pagination transitions.
+ * Presentation wrapper for the preprints section.
+ * - Reuses the ResearchList component for consistent card layout and pagination.
+ * - Hides filtering and category tags by always passing selectedTag="All".
+ * - Keeps UI behavior identical to the Research section, but with a dedicated module
+ *   so that future divergence (e.g., different styling or metadata) is simple.
  */
 
 import parse, { domToReact } from 'html-react-parser'
@@ -14,8 +14,8 @@ import { ExternalLink, FileText, PlayCircle, Code2, ChevronLeft, ChevronRight, Q
 import { motion, AnimatePresence } from 'motion/react'
 import { useI18n } from '../../i18n/I18nProvider'
 
-/** Research work type. */
-export interface ResearchWork {
+/** Preprint work type. */
+export interface PreprintWork {
   id: string
   imgPath: string
   title: string
@@ -34,38 +34,40 @@ export interface ResearchWork {
   bibtex?: string
 }
 
-/** Props for the list. */
-export interface ResearchListProps {
-  works: ResearchWork[]
-  selectedTag: string
+/**
+ * Props for the preprints list.
+ */
+export interface PreprintsListProps {
+  /** Preprint items to render; reuses the ResearchWork shape. */
+  items: PreprintWork[]
 }
 
 /** Page size for research list. */
-const PAGE_SIZE = 10
+const PAGE_SIZE = 5
 
 /** Max characters to display for abstract before truncating. Approximates 3 lines. */
 const ABSTRACT_MAX_CHARS = 250
 
-const HIGHLIGHT_IDS = new Set(['InterDist', 'motionretargeting', 'HoughLaneNet', 'ReferColorization', 'activecolorization'])
+const HIGHLIGHT_IDS = new Set(['motionretargeting'])
 
 /**
- * ResearchList
- * Filters by selectedTag, paginates, and renders the list.
+ * PreprintsList
  */
-const ResearchList: React.FC<ResearchListProps> = ({ works, selectedTag }) => {
+const PreprintsList: React.FC<PreprintsListProps> = ({ items }) => {
   const { t } = useI18n()
   const [page, setPage] = useState(0)
+  const selectedTag = 'All'
 
-  /** Filter works by selected tag. */
+  /** Filter items by selected tag. */
   const filtered = useMemo(
-    () => works.filter((w) => selectedTag === 'All' || w.tags.includes(selectedTag)),
-    [works, selectedTag]
+    () => items.filter((w) => selectedTag === 'All' || w.tags.includes(selectedTag)),
+    [items, selectedTag]
   )
 
   /** Reset to first page when data or filter changes. */
   useEffect(() => {
     setPage(0)
-  }, [selectedTag, works])
+  }, [selectedTag, items])
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const pageClamped = Math.min(page, totalPages - 1)
@@ -270,4 +272,4 @@ const ResearchList: React.FC<ResearchListProps> = ({ works, selectedTag }) => {
   )
 }
 
-export default ResearchList
+export default PreprintsList

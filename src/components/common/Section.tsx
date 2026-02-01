@@ -48,7 +48,7 @@ const Section: React.FC<SectionProps> = ({ id, title, subtitle, children, classN
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
               {title}
             </h2>
-            {id === 'research' && subtitle ? (
+            {id === 'research' || id === 'preprints' && subtitle ? (
               <p className="mt-2 text-neutral-600 dark:text-neutral-300">{subtitle}</p>
             ) : null}
           </header>

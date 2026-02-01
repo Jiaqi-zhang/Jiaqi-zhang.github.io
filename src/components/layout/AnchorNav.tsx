@@ -11,6 +11,7 @@ import * as Popover from '@radix-ui/react-popover'
 import React from 'react'
 import { useI18n } from '../../i18n/I18nProvider'
 import { HashLink } from 'react-router-hash-link'
+import { preprints } from '../../config/content'
 
 /** Props for AnchorNav (none for now). */
 export interface AnchorNavProps {}
@@ -23,7 +24,7 @@ const AnchorNav: React.FC<AnchorNavProps> = () => {
   const { lang, setLang, t } = useI18n()
   const items = [
     { id: 'about', label: t('nav.about'), icon: User2 },
-    { id: 'news', label: t('nav.news'), icon: Megaphone },
+    { id: 'preprints', label: t('nav.preprints'), icon: Megaphone },
     { id: 'research', label: t('nav.research'), icon: BookOpen },
     { id: 'projects', label: t('nav.projects'), icon: FolderGit2 },
     { id: 'gallery', label: t('nav.gallery'), icon: GalleryHorizontal },
@@ -44,16 +45,23 @@ const AnchorNav: React.FC<AnchorNavProps> = () => {
         <div className="flex items-center gap-2">
           {/* Desktop anchors */}
           <ul className="hidden sm:flex items-center gap-1">
-            {items.map(({ id, label, icon: Icon }) => (
-              <li key={id}>
-                <HashLink smooth to={`#${id}`}
-                  className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-xs font-medium text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
-                >
-                  <Icon className="h-4 w-4" aria-hidden />
-                  <span>{label}</span>
-                </HashLink>
-              </li>
-            ))}
+            {items.map(({ id, label, icon: Icon }) => {
+              // if id === 'preprints' && preprints.length === 0: skip rendering
+              if (id === 'preprints' && preprints.length === 0) {
+                return null
+              }
+
+              return (
+                <li key={id}>
+                  <HashLink smooth to={`#${id}`}
+                    className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-xs font-medium text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                  >
+                    <Icon className="h-4 w-4" aria-hidden />
+                    <span>{label}</span>
+                  </HashLink>
+                </li>
+              )
+            })}
           </ul>
 
           {/* Mobile quick menu (popover) */}
@@ -75,18 +83,25 @@ const AnchorNav: React.FC<AnchorNavProps> = () => {
                 className="z-50 w-44 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-2 shadow-lg"
               >
                 <ul className="flex flex-col">
-                  {items.map(({ id, label, icon: Icon }) => (
-                    <li key={id}>
-                      <Popover.Close asChild>
-                        <HashLink smooth to={`#${id}`}
-                          className="flex items-center gap-2 rounded-md px-2 py-2 text-sm text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none"
-                        >
-                          <Icon className="h-4 w-4" aria-hidden />
-                          <span>{label}</span>
-                        </HashLink>
-                      </Popover.Close>
-                    </li>
-                  ))}
+                  {items.map(({ id, label, icon: Icon }) => {
+                    // if id === 'preprints' && preprints.length === 0: skip rendering
+                    if (id === 'preprints' && preprints.length === 0) {
+                      return null
+                    }
+
+                    return (
+                      <li key={id}>
+                        <Popover.Close asChild>
+                          <HashLink smooth to={`#${id}`}
+                            className="flex items-center gap-2 rounded-md px-2 py-2 text-sm text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none"
+                          >
+                            <Icon className="h-4 w-4" aria-hidden />
+                            <span>{label}</span>
+                          </HashLink>
+                        </Popover.Close>
+                      </li>
+                    )
+                  })}
                 </ul>
               </Popover.Content>
             </Popover.Portal>

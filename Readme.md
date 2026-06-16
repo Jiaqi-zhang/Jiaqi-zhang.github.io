@@ -85,6 +85,7 @@ apk add git
 git config --global user.email "zhangjiaqi79@126.com"
 git config --global user.name "Jiaqi-Zhang"
 
+<!-- Upload /root/.ssh/id_rsa.pub to GitHub -->
 apk add openssh
 ssh-keygen -t rsa -b 4096 -C "zhangjiaqi79@126.com"
 

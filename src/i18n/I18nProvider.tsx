@@ -22,7 +22,7 @@ interface I18nContextValue {
 /** Translation dictionary. Keep UI text here; content data can stay as-is. */
 const dict = {
   en: {
-    brand: 'Zhang Jia-Qi @ BUAA',
+    brand: 'Zhang Jia-Qi @ CHD',
     nav: {
       about: 'About',
       preprints: 'Report',
@@ -75,7 +75,7 @@ const dict = {
     langToggle: '中文',
   },
   zh: {
-    brand: '张加其 @ BUAA',
+    brand: '张加其 @ CHD',
     nav: {
       about: '关于',
       preprints: '报告',

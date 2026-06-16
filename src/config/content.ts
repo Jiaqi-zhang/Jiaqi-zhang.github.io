@@ -16,10 +16,11 @@ import type { AffiliationItem } from '../components/affiliations/AffiliationsRow
 /** Profile data used by Hero section (English). */
 export const profile: Profile = {
   name: 'Zhang Jia-Qi (张加其)',
-  title: 'Ph.D. Candidate',
-  affiliation: 'State Key Laboratory of Virtual Reality Technology and Systems, Beihang University (BUAA)',
-  location: 'Beijing, China',
-  bio: "I am currently a Ph.D. candidate at Beihang University (BUAA), under the supervision of Professor Shimin Hu (胡事民) and <a href='http://miaowang.me/'>Professor Miao Wang (汪淼)</a>. I obtained both my Bachelor's and Master's degrees in Software Engineering from North China Electric Power University, where I was mentored by <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>Professor Su-Qin Wang (王素琴)</a> and <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>Professor Min Shi (石敏)</a>. During my Master's program, I also conducted academic research under the guidance of <a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>Professor Lin Gao (高林)</a> at the Institute of Computing Technology, Chinese Academy of Sciences.",
+  title: 'Lecturer',
+  affiliation: 'Department of Software Engineering, School of Information Engineering, Chan\'an University (CHD)',
+  location: 'Xi\'an, China',
+  bio: "He is currently a Lecturer in the Department of Software Engineering, School of Information Engineering, Chang\'an University. He received his Ph.D. from Beihang University, where he was advised by Professor Shi-Min Hu and <a href='http://miaowang.me/'>Professor Miao Wang</a>. He received both his B.Eng. and M.Eng. degrees in Software Engineering from North China Electric Power University, under the supervision of <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>Professor Suqin Wang</a> and <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>Professor Min Shi</a>. During his master\'s studies, he was a visiting researcher at the Institute of Computing Technology, Chinese Academy of Sciences, working under the supervision of <a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>Professor Gao Lin</a>.",
+  // I am currently a Ph.D. candidate at Beihang University (BUAA), under the supervision of Professor Shimin Hu (胡事民) and <a href='http://miaowang.me/'>Professor Miao Wang (汪淼)</a>. I obtained both my Bachelor's and Master's degrees in Software Engineering from North China Electric Power University, where I was mentored by <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>Professor Su-Qin Wang (王素琴)</a> and <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>Professor Min Shi (石敏)</a>. During my Master's program, I also conducted academic research under the guidance of <a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>Professor Lin Gao (高林)</a> at the Institute of Computing Technology, Chinese Academy of Sciences.",
   interests: [
     { 
       label: '3D Character Animation', 
@@ -30,7 +31,7 @@ export const profile: Profile = {
       description: 'Automatic colorization of sketch images or line art videos.' 
     }
   ],
-  email: 'zhangjiaqi79@buaa.edu.cn',
+  email: 'jiaqizhang@chd.edu.cn',
   links: {
     scholar: 'https://scholar.google.com/citations?hl=zh-CN&user=a-CCwW8AAAAJ',
     orcid: 'https://orcid.org/0000-0002-8482-3666',
@@ -46,10 +47,11 @@ export const profile: Profile = {
 /** Profile data used by Hero section (Chinese). */
 export const profileZh: Profile = {
   name: '张加其 (Zhang Jia-Qi)', // 或 Dr. Alex Chen
-  title: '博士生',
-  affiliation: '北京航空航天大学，虚拟现实技术与系统国家重点实验室',
-  location: '中国，北京',
-  bio: "北京航空航天大学博士研究生在读，导师为胡事民教授与<a href='http://miaowang.me/'>汪淼教授</a>。本科及硕士均毕业于华北电力大学软件工程专业，师从<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>王素琴教授</a>和<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>石敏教授</a>。硕士期间，曾在中国科学院计算技术研究所<a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>高林教授</a>指导下进行访问研究。",
+  title: '讲师',
+  affiliation: '长安大学，信息工程学院软件工程系',
+  location: '中国，西安',
+  bio: "现任长安大学信息工程学院软件工程系讲师。博士毕业于北京航空航天大学，导师为胡事民教授与<a href='http://miaowang.me/'>汪淼教授</a>。本科和硕士阶段均就读于华北电力大学软件工程专业，师从<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>王素琴教授</a>和<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>石敏教授</a>。硕士期间，曾赴中国科学院计算技术研究所，在<a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>高林教授</a>指导下开展访问研究。",
+  // 北京航空航天大学博士研究生在读，导师为胡事民教授与<a href='http://miaowang.me/'>汪淼教授</a>。本科及硕士均毕业于华北电力大学软件工程专业，师从<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>王素琴教授</a>和<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>石敏教授</a>。硕士期间，曾在中国科学院计算技术研究所<a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>高林教授</a>指导下进行访问研究。",
   interests: [
     { 
       label: '三维角色动画', 
@@ -60,7 +62,7 @@ export const profileZh: Profile = {
       description: '自动为线稿图像或线稿视频上色。' 
     }
   ],
-  email: 'zhangjiaqi79@buaa.edu.cn',
+  email: 'jiaqizhang@chd.edu.cn',
   links: {
     scholar: 'https://scholar.google.com/citations?hl=zh-CN&user=a-CCwW8AAAAJ',
     orcid: 'https://orcid.org/0000-0002-8482-3666',
@@ -358,6 +360,7 @@ export const gallery: GalleryItem[] = [
 
 /** Institutions/organizations logos to display in one centered row. */
 export const affiliations: AffiliationItem[] = [
+  { name: 'Work - CHD University', src: '/images/chd_logo_red.svg' },
   { name: 'PhD - BUAA University', src: '/images/buaa_logo.png' },
   { name: 'Master - NCEPU University', src: '/images/ncepu_logo.png' },
 ]

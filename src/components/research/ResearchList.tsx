@@ -13,6 +13,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { ExternalLink, FileText, PlayCircle, Code2, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useI18n } from '../../i18n/I18nProvider'
+import { scrollToSection } from '../../lib/scrollToSection'
 import AbstractDialog from '../common/AbstractDialog'
 
 /** Research work type. */
@@ -76,6 +77,14 @@ const ResearchList: React.FC<ResearchListProps> = ({ works, selectedTag }) => {
 
   const start = pageClamped * PAGE_SIZE
   const visible = filtered.slice(start, start + PAGE_SIZE)
+
+  const changePage = (nextPage: number) => {
+    const targetPage = Math.max(0, Math.min(totalPages - 1, nextPage))
+    if (targetPage === pageClamped) return
+
+    setPage(targetPage)
+    scrollToSection('research')
+  }
 
   /** 
    * Handles opening the BibTeX content in a new tab as a simulated "text file".
@@ -239,7 +248,7 @@ const ResearchList: React.FC<ResearchListProps> = ({ works, selectedTag }) => {
         <nav className="flex items-center justify-center gap-4 pt-2" aria-label="Pagination">
           <button
             type="button"
-            onClick={() => setPage((p) => Math.max(0, p - 1))}
+            onClick={() => changePage(pageClamped - 1)}
             disabled={pageClamped === 0}
             aria-label="Previous Page"
             className="p-2 rounded-full border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
@@ -251,7 +260,7 @@ const ResearchList: React.FC<ResearchListProps> = ({ works, selectedTag }) => {
           </span>
           <button
             type="button"
-            onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+            onClick={() => changePage(pageClamped + 1)}
             disabled={pageClamped >= totalPages - 1}
             aria-label="Next Page"
             className="p-2 rounded-full border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"

@@ -49,7 +49,7 @@ const dict = {
       },
       research: {
         title: '📝 Research',
-        subtitle: '# These authors contributed equally.',
+        subtitle: '# denotes equal contribution, and * denotes the corresponding author.',
       },
       projects: {
         title: '💻 Projects',
@@ -102,7 +102,7 @@ const dict = {
       },
       research: {
         title: '📝 研究',
-        subtitle: '# 代表共同一作。',
+        subtitle: '# 代表共同一作，*代表通讯作者。',
       },
       projects: {
         title: '💻 项目',

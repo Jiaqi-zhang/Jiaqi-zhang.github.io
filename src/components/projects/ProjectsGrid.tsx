@@ -7,6 +7,7 @@ import React, { useState } from 'react'
 import { ArrowUpRight, ChevronLeft, ChevronRight, FolderGit2 } from 'lucide-react'
 import { motion } from 'motion/react'
 import { useI18n } from '../../i18n/I18nProvider'
+import { scrollToSection } from '../../lib/scrollToSection'
 
 export interface ProjectItem {
   title: string
@@ -31,8 +32,16 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ items }) => {
   const start = page * PAGE_SIZE
   const visibleItems = items.slice(start, start + PAGE_SIZE)
 
-  const handleNext = () => setPage((p) => Math.min(totalPages - 1, p + 1))
-  const handlePrev = () => setPage((p) => Math.max(0, p - 1))
+  const changePage = (nextPage: number) => {
+    const targetPage = Math.max(0, Math.min(totalPages - 1, nextPage))
+    if (targetPage === page) return
+
+    setPage(targetPage)
+    scrollToSection('projects')
+  }
+
+  const handleNext = () => changePage(page + 1)
+  const handlePrev = () => changePage(page - 1)
 
   return (
     <div className="space-y-6">

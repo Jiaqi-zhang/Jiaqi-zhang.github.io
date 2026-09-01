@@ -7,6 +7,7 @@ import React, { useState } from 'react'
 import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react'
 import { motion } from 'motion/react'
 import { Dialog, DialogContent, DialogTrigger } from '../../components/ui/dialog'
+import { scrollToSection } from '../../lib/scrollToSection'
 
 export interface GalleryItem {
   srcKeyword: string
@@ -28,8 +29,16 @@ const GalleryMosaic: React.FC<GalleryMosaicProps> = ({ items }) => {
   const start = page * PAGE_SIZE
   const visibleItems = items.slice(start, start + PAGE_SIZE)
 
-  const handleNext = () => setPage((p) => Math.min(totalPages - 1, p + 1))
-  const handlePrev = () => setPage((p) => Math.max(0, p - 1))
+  const changePage = (nextPage: number) => {
+    const targetPage = Math.max(0, Math.min(totalPages - 1, nextPage))
+    if (targetPage === page) return
+
+    setPage(targetPage)
+    scrollToSection('gallery')
+  }
+
+  const handleNext = () => changePage(page + 1)
+  const handlePrev = () => changePage(page - 1)
 
   return (
     <div className="space-y-6">

@@ -28,8 +28,8 @@ export interface Profile {
   affiliation: string
   /** Location string. */
   location: string
-  /** Short bio/intro. */
-  bio: string
+  /** Bio/introduction paragraphs. */
+  bio: string[]
   /** Optional list of research interests/focus areas. */
   interests?: ResearchInterest[]
   /** Email address. */
@@ -182,29 +182,33 @@ const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
             <span className="font-bold">{profile.email}</span>
           </p>
 
-          <p className="mt-4 text-neutral-700 dark:text-neutral-200 leading-relaxed">
-            {parse(profile.bio, {
-              replace: (domNode) => {
-                if (
-                  domNode.type === 'tag' &&
-                  domNode.name === 'a' &&
-                  'attribs' in domNode
-                ) {
-                  const el = domNode as any
-                  return (
-                    <a
-                      href={el.attribs.href}
-                      className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 hover:underline"
-                      target={el.attribs.target || '_blank'}
-                      rel="noopener noreferrer"
-                    >
-                      {domToReact(el.children)}
-                    </a>
-                  )
-                }
-              },
-            })}
-          </p>
+          <div className="mt-4 space-y-3 text-neutral-700 dark:text-neutral-200 leading-relaxed">
+            {profile.bio.map((paragraph, index) => (
+              <p key={index}>
+                {parse(paragraph, {
+                  replace: (domNode) => {
+                    if (
+                      domNode.type === 'tag' &&
+                      domNode.name === 'a' &&
+                      'attribs' in domNode
+                    ) {
+                      const el = domNode as any
+                      return (
+                        <a
+                          href={el.attribs.href}
+                          className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 hover:underline"
+                          target={el.attribs.target || '_blank'}
+                          rel="noopener noreferrer"
+                        >
+                          {domToReact(el.children)}
+                        </a>
+                      )
+                    }
+                  },
+                })}
+              </p>
+            ))}
+          </div>
 
           {/* Research Interests Block (Gray Background) */}
           {profile.interests && profile.interests.length > 0 && (

@@ -19,15 +19,18 @@ export const profile: Profile = {
   title: 'Lecturer',
   affiliation: 'Department of Software Engineering, School of Information Engineering, Chang\'an University (CHD)',
   location: 'Xi\'an, China',
-  bio: "He is currently a Lecturer in the Department of Software Engineering, School of Information Engineering, Chang\'an University. He received his Ph.D. from Beihang University, where he was advised by Professor Shi-Min Hu and <a href='http://miaowang.me/'>Professor Miao Wang</a>. He received both his B.Eng. and M.Eng. degrees in Software Engineering from North China Electric Power University, under the supervision of <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>Professor Suqin Wang</a> and <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>Professor Min Shi</a>. During his master\'s studies, he was a visiting researcher at the Institute of Computing Technology, Chinese Academy of Sciences, working under the supervision of <a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>Professor Gao Lin</a>.",
+  bio: [
+    "I am currently a lecturer in the Department of Software Engineering at the School of Information Engineering, Chang’an University. My research lies at the intersection of computer graphics, computer vision, and artificial intelligence. I received my Ph.D. from Beihang University under the supervision of Professor Shi-Min Hu and <a href='http://miaowang.me/'>Professor Miao Wang</a>. I earned both my bachelor’s and master’s degrees in Software Engineering from North China Electric Power University, where I was advised by <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>Professor Suqin Wang</a> and <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>Professor Min Shi</a>. During my master’s studies, I interned at the Institute of Computing Technology, Chinese Academy of Sciences, where I conducted research under the guidance of <a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>Professor Lin Gao</a>.",
+    "My recent research has focused on text-driven human motion generation and editing, human–human interaction modeling, robotic facial expression generation, physics-based cloth simulation, and automatic line-art colorization. My work has been published in leading journals and conferences, including IEEE TVCG, ACM MM, and PG, and received the Best Paper Award at CCF CAD/Graphics 2023."
+  ],
   interests: [
     { 
       label: 'Research Interests', 
-      description: '3D Character Animation, Character–Scene Interaction Generation, Line Art Colorization, Lane Detection.' 
+      description: '🚀 3D Character Animation, Character–Scene Interaction Generation, Line Art Colorization, Lane Detection.' 
     },
     { 
       label: 'Prospective Students', 
-      description: 'Our group recruits several master’s students each year. Undergraduate students at Chang’an University are also welcome to join the group for research training. Interested students are encouraged to contact me by email.' 
+      description: '🔔 Our group has openings for several master’s students each year. Undergraduate students at Chang’an University are also invited to get involved in our research projects for training. Prospective students are welcome to email me if you are interested.' 
     }
   ],
   email: 'jiaqizhang@chd.edu.cn',
@@ -49,15 +52,18 @@ export const profileZh: Profile = {
   title: '讲师',
   affiliation: '长安大学，信息工程学院软件工程系',
   location: '中国，西安',
-  bio: "现任长安大学信息工程学院软件工程系讲师。博士毕业于北京航空航天大学，导师为胡事民教授与<a href='http://miaowang.me/'>汪淼教授</a>。本科和硕士阶段均就读于华北电力大学软件工程专业，师从<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>王素琴教授</a>和<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>石敏教授</a>。硕士期间，曾赴中国科学院计算技术研究所，在<a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>高林教授</a>指导下开展访问研究。",
+  bio: [
+    "现任长安大学信息工程学院软件工程系讲师，主要从事计算机图形学、计算机视觉与人工智能交叉领域的研究。博士毕业于北京航空航天大学，导师为胡事民教授与<a href='http://miaowang.me/'>汪淼教授</a>。本科和硕士阶段均就读于华北电力大学软件工程专业，师从<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>王素琴教授</a>和<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>石敏教授</a>。硕士期间，曾在中国科学院计算技术研究所实习，并在<a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>高林教授</a>的指导下开展相关科研工作。",
+    "近年来，围绕文本驱动的人体动作生成与编辑、人际交互动作建模、机器人面部表情生成、服装物理仿真以及线稿自动上色等问题开展了系统研究，相关成果发表于 IEEE TVCG、ACM MM、PG等期刊或会议，并获 CCF CAD/Graphics 2023 最佳论文奖。",
+  ],
   interests: [
     { 
       label: '研究方向', 
-      description: '三维角色动画、角色与场景交互生成、线稿图像上色、车道线检测' 
+      description: '🚀 三维角色动画、角色与场景交互生成、线稿图像上色、车道线检测' 
     },
     { 
       label: '关于招生', 
-      description: '团队每年招收硕士研究生数名，同时欢迎长大本科生进课题组进行科研训练，感兴趣的同学请邮件联系。' 
+      description: '🔔 团队每年招收硕士研究生数名，同时欢迎长大本科生进课题组进行科研训练，感兴趣的同学请邮件联系。' 
     }
   ],
   email: 'jiaqizhang@chd.edu.cn',

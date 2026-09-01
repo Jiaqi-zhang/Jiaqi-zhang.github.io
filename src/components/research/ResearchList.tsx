@@ -13,6 +13,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { ExternalLink, FileText, PlayCircle, Code2, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useI18n } from '../../i18n/I18nProvider'
+import AbstractDialog from '../common/AbstractDialog'
 
 /** Research work type. */
 export interface ResearchWork {
@@ -46,7 +47,7 @@ const PAGE_SIZE = 10
 /** Max characters to display for abstract before truncating. Approximates 3 lines. */
 const ABSTRACT_MAX_CHARS = 250
 
-const HIGHLIGHT_IDS = new Set(['InterDist', 'motionretargeting', 'HoughLaneNet', 'ReferColorization', 'activecolorization'])
+const HIGHLIGHT_IDS = new Set(['MoGenFlow', 'ServoFormer', 'InterDist', 'motionretargeting', 'HoughLaneNet', 'ReferColorization', 'activecolorization'])
 
 /**
  * ResearchList
@@ -141,7 +142,7 @@ const ResearchList: React.FC<ResearchListProps> = ({ works, selectedTag }) => {
                   {w.venue} · {w.year}
                 </p>
 
-                {/* Abstract display with prefix and See More link */}
+                {/* Abstract display with a shared full-text dialog. */}
                 {w.abstract && (
                   <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                     <span className="font-bold italic underline text-neutral-800 dark:text-neutral-200">Abstract:</span>{' '}
@@ -149,14 +150,7 @@ const ResearchList: React.FC<ResearchListProps> = ({ works, selectedTag }) => {
                     {isLongAbstract && (
                       <>
                         ...{' '}
-                        <a 
-                          href={w.links?.paper || '#'} 
-                          target="_blank" 
-                          rel="noreferrer"
-                          className="inline-flex items-center font-medium text-sky-600 dark:text-sky-400 hover:underline cursor-pointer"
-                        >
-                          See More
-                        </a>
+                        <AbstractDialog title={w.title} abstract={abstractText} />
                       </>
                     )}
                   </p>

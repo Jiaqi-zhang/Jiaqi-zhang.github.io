@@ -17,18 +17,17 @@ import type { AffiliationItem } from '../components/affiliations/AffiliationsRow
 export const profile: Profile = {
   name: 'Zhang Jia-Qi (张加其)',
   title: 'Lecturer',
-  affiliation: 'Department of Software Engineering, School of Information Engineering, Chan\'an University (CHD)',
+  affiliation: 'Department of Software Engineering, School of Information Engineering, Chang\'an University (CHD)',
   location: 'Xi\'an, China',
   bio: "He is currently a Lecturer in the Department of Software Engineering, School of Information Engineering, Chang\'an University. He received his Ph.D. from Beihang University, where he was advised by Professor Shi-Min Hu and <a href='http://miaowang.me/'>Professor Miao Wang</a>. He received both his B.Eng. and M.Eng. degrees in Software Engineering from North China Electric Power University, under the supervision of <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>Professor Suqin Wang</a> and <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>Professor Min Shi</a>. During his master\'s studies, he was a visiting researcher at the Institute of Computing Technology, Chinese Academy of Sciences, working under the supervision of <a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>Professor Gao Lin</a>.",
-  // I am currently a Ph.D. candidate at Beihang University (BUAA), under the supervision of Professor Shimin Hu (胡事民) and <a href='http://miaowang.me/'>Professor Miao Wang (汪淼)</a>. I obtained both my Bachelor's and Master's degrees in Software Engineering from North China Electric Power University, where I was mentored by <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>Professor Su-Qin Wang (王素琴)</a> and <a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>Professor Min Shi (石敏)</a>. During my Master's program, I also conducted academic research under the guidance of <a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>Professor Lin Gao (高林)</a> at the Institute of Computing Technology, Chinese Academy of Sciences.",
   interests: [
     { 
-      label: '3D Character Animation', 
-      description: 'Text-driven generation of character motions and character-object/scene interactions.' 
+      label: 'Research Interests', 
+      description: '3D Character Animation, Character–Scene Interaction Generation, Line Art Colorization, Lane Detection.' 
     },
     { 
-      label: 'Sketch Image Colorization', 
-      description: 'Automatic colorization of sketch images or line art videos.' 
+      label: 'Prospective Students', 
+      description: 'Our group recruits several master’s students each year. Undergraduate students at Chang’an University are also welcome to join the group for research training. Interested students are encouraged to contact me by email.' 
     }
   ],
   email: 'jiaqizhang@chd.edu.cn',
@@ -51,15 +50,14 @@ export const profileZh: Profile = {
   affiliation: '长安大学，信息工程学院软件工程系',
   location: '中国，西安',
   bio: "现任长安大学信息工程学院软件工程系讲师。博士毕业于北京航空航天大学，导师为胡事民教授与<a href='http://miaowang.me/'>汪淼教授</a>。本科和硕士阶段均就读于华北电力大学软件工程专业，师从<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>王素琴教授</a>和<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>石敏教授</a>。硕士期间，曾赴中国科学院计算技术研究所，在<a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>高林教授</a>指导下开展访问研究。",
-  // 北京航空航天大学博士研究生在读，导师为胡事民教授与<a href='http://miaowang.me/'>汪淼教授</a>。本科及硕士均毕业于华北电力大学软件工程专业，师从<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/2912c61d37bb491685892ee0c6b2e717.htm'>王素琴教授</a>和<a href='https://cce.ncepu.edu.cn/szdw/jsml/rjgcjys/11887a993a444b23b4af863190aed157.htm'>石敏教授</a>。硕士期间，曾在中国科学院计算技术研究所<a href='http://geometrylearning.com/lin/' target='_blank' rel='noopener'>高林教授</a>指导下进行访问研究。",
   interests: [
     { 
-      label: '三维角色动画', 
-      description: '基于文本驱动的角色动作生成及角色与物体/场景交互生成。' 
+      label: '研究方向', 
+      description: '三维角色动画、角色与场景交互生成、线稿图像上色、车道线检测' 
     },
     { 
-      label: '线稿图像上色', 
-      description: '自动为线稿图像或线稿视频上色。' 
+      label: '关于招生', 
+      description: '团队每年招收硕士研究生数名，同时欢迎长大本科生进课题组进行科研训练，感兴趣的同学请邮件联系。' 
     }
   ],
   email: 'jiaqizhang@chd.edu.cn',
@@ -108,6 +106,32 @@ export const preprints: PreprintWork[] = [
 
 /** Selected research works; tags will be aggregated to form filters. */
 export const works: ResearchWork[] = [
+  {
+    id: 'MoGenFlow',
+    imgPath: '/images/works/MoGenFlow.jpg',
+    title: 'Real-time Text-driven Motion Generation and Editing with Skeleton-aware Mean Flow',
+    authors: "Jia-Jun Wang, <b><u>Jia-Qi Zhang</u></b>, Xiao-Nan Fang, Miao Wang",
+    venue: 'IEEE Transactions on Visualization and Computer Graphics (TVCG, CCF A, Minor)',
+    year: 2026,
+    abstract: 'Text-driven human motion generation is pivotal for virtual reality and embodied AI, yet existing paradigms like diffusion models and vector quantization struggle to balance generation quality and inference speed. While Flow Matching offers promising sampling efficiency, naively adapting it to motion generation introduces representation ambiguity and prediction instability, leading to severe kinematic artifacts. To overcome these challenges, we propose MoGenFlow, a novel real-time text-to-motion framework that achieves high-fidelity, one-step generation. Inspired by Mean Flow, MoGenFlow incorporates an integrated Classifier-Free Guidance (CFG) strategy to eliminate the overhead of dual forward passes during inference. To address representation ambiguity, we utilize a finite scalar representation to construct a compact and deterministic latent space that preserves high-frequency kinematic details. Furthermore, we design a flow prediction module with hierarchical conditional injection equipped with a text-skeleton fused modulation mechanism to provide structure-aware guidance for temporal and skeletal motion modeling, stabilized by a novel feature decorrelation loss. Finally, we present a minimal fine-tuning strategy using LoRA for versatile, one-step motion editing tasks such as temporal inpainting and body-part modification. Extensive experiments on HumanML3D and Motion-X datasets demonstrate that MoGenFlow establishes a new state-of-the-art in both generation quality and efficiency, achieving practical real-time generation and editing.',
+    tags: ['Animation'],
+    imageKeyword: 'ai research abstract visualization',
+    links: { paper: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945', },
+    bibtex: ``
+  },
+  {
+    id: 'ServoFormer',
+    imgPath: '/images/works/ServoFormer.jpg',
+    title: 'Noise-Resilient Robotic Facial Expression Generation with a Self-Supervised Embodied Expression Dataset',
+    authors: "Su-Qin Wang, Jun-Wei Kang, Min Shi, Deng-Ming Zhu, <b><u>Jia-Qi Zhang</u></b>",
+    venue: 'ACM International Conference on Multimedia (ACM MM, CCF A)',
+    year: 2026,
+    abstract: 'Generating lifelike facial expressions in embodied robots requires not only accurately mapping semantic facial representations to servo control signals under physical actuation constraints, but also overcoming deviations arising from silicone skin drift and actuator or sensor inaccuracies. Such deviations accumulate during operation, resulting in drift, jitter, and unstable expression generation. Moreover, randomly collected motor data often fail to reflect natural expression semantics and real-world embodied actuation responses. To overcome these challenges, we present ServoFormer, a Transformer-based framework for embodied facial expression control, together with a self-supervised data construction pipeline. By retargeting natural human expressions to a humanoid robot and synchronously capturing its physical responses, we build a temporally aligned embodied facial expression dataset of 39,090 frames. Based on this dataset, ServoFormer maps blendshape sequences to servo commands using an encoder--decoder architecture with Locally Constrained Self-Attention to suppress long-range mechanical noise propagation and Strictly Aligned Cross-Attention to enforce frame-level correspondence. Experiments show that ServoFormer significantly outperforms existing methods in single-frame accuracy, velocity consistency, and expression recognizability, generating more coherent and lifelike robotic facial expressions.',
+    tags: ['Robot'],
+    imageKeyword: 'ai research abstract visualization',
+    links: { paper: 'https://2026.acmmm.org/' },
+    bibtex: ``
+  },
     {
     id: 'InterDist',
     imgPath: '/images/works/interdist.jpg',
@@ -161,7 +185,7 @@ author = {Jiaqi ZHANG, Jiajun WANG, Fanglue ZHANG, Miao WANG},
     venue: 'Pacific Conference on Computer Graphics and Applications (PG, CCF B)',
     year: 2025,
     abstract: "Simulating wet clothing remains a significant challenge due to the complex physical interactions between moist fabric and the human body, compounded by the lack of dedicated datasets for training data-driven models. Existing self-supervised approaches struggle to capture moisture-induced dynamics such as skin adhesion, anisotropic surface resistance, and non-linear wrinkling, leading to limited accuracy and efficiency. To address this, we present SHGS, a novel self-supervised framework for humidity-controllable clothing simulation grounded in the physical modeling of capillary bridges that form between fabric and skin. We abstract the forces induced by wetness into two physically motivated components: a normal adhesive force derived from Laplace pressure and a tangential shear-resistance force that opposes relative motion along the fabric surface. By formulating these forces as potential energy for conservative effects and as mechanical work for non-conservative effects, we construct a physics-consistent wetness loss. This enables self-supervised training without requiring labeled data of wet clothing. Our humidity-sensitive dynamics are driven by a multi-layer graph neural network, which facilitates a smooth and physically realistic transition between different moisture levels. This architecture decouples the garment's dynamics in wet and dry states through a local weight interpolation mechanism, adjusting the fabric's behavior in response to varying humidity conditions. Experiments demonstrate that SHGS outperforms existing methods in both visual fidelity and computational efficiency, marking a significant advancement in realistic wet-cloth simulation.",
-    tags: ['GarmentSimulation'],
+    tags: ['Simulation'],
     imageKeyword: 'machine learning robustness diagram',
     links: { paper: 'https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.70236' },
     bibtex: `@article{shi2025shgs,
@@ -256,7 +280,7 @@ EISSN = {1873-7684},
     imgPath: '/images/works/survey.png',
     title: 'A review of image and video colorization: From analogies to deep learning',
     authors: 'Shu-Yu Chen, <b><u>Jia-Qi Zhang</u></b>, You-You Zhao, Paul L. Rosin, Yu-Kun Lai, Lin Gao',
-    venue: 'Visual Informatics (VI)',
+    venue: 'Visual Informatics (VI, CCF C)',
     year: 2022,
     abstract: "Image colorization is a classic and important topic in computer graphics, where the aim is to add color to a monochromatic input image to produce a colorful result. In this survey, we present the history of colorization research in chronological order and summarize popular algorithms in this field. Early work on colorization mostly focused on developing techniques to improve the colorization quality. In the last few years, researchers have considered more possibilities such as combining colorization with NLP (natural language processing) and focused more on industrial applications. To better control the color, various types of color control are designed, such as providing reference images or color-scribbles. We have created a taxonomy of the colorization methods according to the input type, divided into grayscale, sketch-based and hybrid. The pros and cons are discussed for each algorithm, and they are compared according to their main characteristics. Finally, we discuss how deep learning, and in particular Generative Adversarial Networks (GANs), has changed this field.",
     tags: ['Colorization'],
